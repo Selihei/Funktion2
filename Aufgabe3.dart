@@ -1,18 +1,22 @@
-
-main(){
-int result;
-String word = "Hello";
-result = wlength(word);
-print("Ergebnis: $result");
-word = "World!";
-result = wlength(word);
-print("Ergebnis: $result");
-word = "Ergebnis";
-result = wlength(word);
-print("Ergebnis: $result");
+int counter = 0;
+main() {
+  counter = 0;
+  String text = "Hello World";
+  countVletters(text);
+  print("Anzahl der Vokale: $counter");
+  text = "Überbrückung";
+  countVletters(text);
+  print("Anzahl der Vokale: $counter");
+  text = "Wochenende";
+  countVletters(text);
+  print("Anzahl der Vokale: $counter");
 }
 
-int wlength(String text){
-int result = text.length;
-return result;
+int countVletters(String text) {
+  List<String> letters = ["a", "e", "i", "o", "u", "ä", "ö", "ü"];
+  for (int i = 0; i < text.length; i++) {
+    String char = text[i].toLowerCase();
+    if (letters.contains(char)) counter++;
+  }
+  return counter;
 }

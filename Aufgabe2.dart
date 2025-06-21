@@ -1,14 +1,18 @@
 
 main(){
-String result;
-String a = "Hello";
-String b = "World";
-String c = "!";
-result = paragraph(a, b, c);
+int result;
+String word = "Hello";
+result = wlength(word);
+print("Ergebnis: $result");
+word = "World!";
+result = wlength(word);
+print("Ergebnis: $result");
+word = "Ergebnis";
+result = wlength(word);
 print("Ergebnis: $result");
 }
 
-String paragraph(String a, String b, String c){
-String result = a + " "+ b + c;
+int wlength(String text){
+int result = text.length;
 return result;
 }
