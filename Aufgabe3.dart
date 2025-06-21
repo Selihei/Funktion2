@@ -13,6 +13,7 @@ main() {
 }
 
 int countVletters(String text) {
+    counter = 0;
   List<String> letters = ["a", "e", "i", "o", "u", "ä", "ö", "ü"];
   for (int i = 0; i < text.length; i++) {
     String char = text[i].toLowerCase();
